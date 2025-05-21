@@ -24,11 +24,27 @@
 <body>
     <div class="container">
         <div id="perfil">
-            <img src= "./assets/perfil.jpeg">
-            
-        
+            <img src="./assets/perfil.jpeg">
+
+
             <span>@MATHEUS</span>
         </div>
+
+        <div onclick="mudarTema()" id="switch">
+
+            <button></button>
+            <span></span>
+        </div>
+        <script>
+            function mudarTema() {
+
+                const html = document.documentElement
+                html.classList.toggle("light")
+
+            }
+        </script>
+
+
         <div class="menu">
             <ul>
                 <li>
@@ -45,7 +61,7 @@
                 </li>
                 <li>
                     <a href="https://chatgpt.com/">ABRIR CHAT GPT</a>
-                    
+
                 </li>
             </ul>
 
