@@ -29,16 +29,12 @@ body {
 
 
 .container {
-    width: 100%;
-    
+    max-width: 588px;
     padding: 0 24px;
     margin: 0 auto;
-
-
-
 }
 
-@media(min-width: 1153px)
+
 
 #perfil {
     text-align: center;
