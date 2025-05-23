@@ -16,7 +16,6 @@
     --surface-color-hover: black;
     --surface-color-text-hover: white;
     --switch-bg-url: url("./assets/Sun.svg")
-    
 }
 
 body {
@@ -31,13 +30,15 @@ body {
 
 .container {
     width: 100%;
-    max-width: 588px;
+    
     padding: 0 24px;
     margin: 0 auto;
 
 
 
 }
+
+@media(min-width: 1153px)
 
 #perfil {
     text-align: center;
@@ -79,8 +80,54 @@ body {
     background-color: white;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    animation: slide-out 0.3s forwards;
 
 }
+
+
+
+#switch span {
+    width: 64px;
+    height: 24px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    display: block;
+    background: var(--surface-color);
+
+}
+
+.light #switch button {
+    animation: slide-in 0.3s forwards;
+
+}
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+
+
 
 .menu ul {
     list-style-type: none;
@@ -144,4 +191,15 @@ body {
 
 .social a:hover {
     opacity: 0.5;
+}
+
+@media(max-width: 1153px) {
+    :root {
+        --background-img: url("./assets/bg-mobile.jpg");
+
+    }
+
+    .light {
+        --background-img: url("./assets/bg-mobile-light.jpg");
+    }
 }
